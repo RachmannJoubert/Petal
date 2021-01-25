@@ -1,0 +1,19 @@
+{
+  "name": "petal",
+  "version": "1.0.0",
+  "description": "Garden management application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RachmannJoubert/Petal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RachmannJoubert/Petal/issues"
+  },
+  "homepage": "https://github.com/RachmannJoubert/Petal#readme"
+}
