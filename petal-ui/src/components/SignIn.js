@@ -7,33 +7,46 @@ export const SignIn = (props) => {
     console.log(email);
   };
   return (
-    <div className="auth-form-container">
-      <h2>Sign in</h2>
-      <form className="sign-in-form" onSubmit={handleSubmit}>
-        <label htmlFor="email">Email address</label>
-        <input
-          type="email"
-          placeholder="yourmail@gmail.com"
-          name="email"
-          onChange={(e) => setEmail(e.target.value)}
-          value={email}
-        />
-        <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          placeholder="*********"
-          name="password"
-          value={pass}
-          onChange={(e) => setPass(e.target.value)}
-        />
-        <button>Sign in</button>
-      </form>
-      <button
-        className="link-btn"
-        onClick={() => props.onFormSwitch("sign-up")}
-      >
-        Don't have an account? Sign up here.
-      </button>
+    <div className="main">
+      <h3>Petal Logo</h3>
+      <div className="auth-form-container">
+        <div className="title-container">
+          <div>
+            <h4> Welcome to PETAL</h4>
+          </div>
+          <div>
+            <button
+              className="link-btn"
+              onClick={() => props.onFormSwitch("sign-up")}
+            >
+              No Account?
+              <p>Sign up</p>
+            </button>
+          </div>
+        </div>
+        <h2>Sign in</h2>
+        <form className="sign-in-form" onSubmit={handleSubmit}>
+          <label htmlFor="email">Enter your username or email address</label>
+          <input
+            type="email"
+            placeholder="yourmail@gmail.com"
+            name="email"
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
+          />
+          <label htmlFor="password">Enter your password</label>
+          <input
+            type="password"
+            placeholder="*********"
+            name="password"
+            value={pass}
+            onChange={(e) => setPass(e.target.value)}
+          />
+          <div className="button-container">
+            <button>Sign in</button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };
