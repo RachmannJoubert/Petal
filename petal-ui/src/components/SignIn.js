@@ -43,7 +43,9 @@ export const SignIn = (props) => {
             onChange={(e) => setPass(e.target.value)}
           />
           <div className="button-container">
-            <button>Sign in</button>
+            <button onClick={() => props.onFormSwitch("searchresults")}>
+              Sign in
+            </button>
           </div>
         </form>
       </div>
