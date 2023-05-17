@@ -5,7 +5,7 @@ const SearchResults = () => {
   return (
     <div className="container">
       <div className="search-results-container">
-        <img src="../styles/back_button.png" />
+        <img src={require("../styles/back_button.png")} />
         <h3>This is a Plant</h3>
       </div>
       <div className="plantcare-title">
@@ -14,15 +14,15 @@ const SearchResults = () => {
       <div className="plant-care-container">
         <ul>
           <li>
-            {/* <img src="path_to_image1.jpg" alt="Image */}
+            <img src={require("../styles/leaf.png")} />
             Every 3 weeks
           </li>
           <li>
-            {/* <img src="path_to_image1.jpg" alt="Image */}
+            <img src={require("../styles/sun.png")} />
             Moderate Sunlight
           </li>
           <li>
-            {/* <img src="path_to_image1.jpg" alt="Image */}
+            <img src={require("../styles/water.png")} />
             Water every 7 days
           </li>
         </ul>

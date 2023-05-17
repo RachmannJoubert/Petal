@@ -63,15 +63,19 @@ body {
 .plant-care-container ul {
   list-style-type: none;
   padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items:flex-start;
 }
 
 .plant-care-container li {
   padding: 5px;
   margin-bottom: 10px;
-  margin-left: 30px;
   color:rgb(51, 48, 48);
+  display: flex;
+  align-items: center;
   
-
 }
 
 .plant-care-container li img {
