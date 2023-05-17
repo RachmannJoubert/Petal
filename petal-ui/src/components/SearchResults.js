@@ -5,6 +5,7 @@ const SearchResults = () => {
   return (
     <div className="container">
       <div className="search-results-container">
+        <img src="../styles/back_button.png" />
         <h3>This is a Plant</h3>
       </div>
       <div className="plantcare-title">
@@ -28,7 +29,10 @@ const SearchResults = () => {
       </div>
       <div className="overview-container">
         <h3>Overview</h3>
-        <p>planty plant planty plant</p>
+        <p>planty plant planty plant plant plant plant plant</p>
+        <p>planty plant planty plant plant plant plant plant</p>
+        <p>planty plant planty plant plant plant plant plant</p>
+        <p>planty plant planty plant plant plant plant plant</p>
       </div>
     </div>
   );
