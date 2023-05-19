@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const SearchResults = () => {
+const HomePage = () => {
   const navigate = useNavigate();
   const handleButtonClick = () => {
     console.log("Button clicked!");
-    navigate("/plantdetail");
+    navigate("/searchresults");
   };
 
   return (
     <div>
-      <h1>Search Results</h1>
+      <h1>Home Page</h1>
       <button onClick={handleButtonClick}>Click Me</button>
     </div>
   );
 };
 
-export default SearchResults;
+export default HomePage;

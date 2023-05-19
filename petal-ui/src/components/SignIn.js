@@ -42,7 +42,7 @@ export const SignIn = (props) => {
             onChange={(e) => setPass(e.target.value)}
           />
           <div className="button-container">
-            <button onClick={() => navigate("/searchresults")}>Sign in</button>
+            <button onClick={() => navigate("/home")}>Sign in</button>
           </div>
         </form>
       </div>
