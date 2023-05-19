@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 export const SignIn = (props) => {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(email);
@@ -15,10 +17,7 @@ export const SignIn = (props) => {
             <h4> Welcome to PETAL</h4>
           </div>
           <div>
-            <button
-              className="link-btn"
-              onClick={() => props.onFormSwitch("sign-up")}
-            >
+            <button className="link-btn" onClick={() => navigate("/signup")}>
               No Account?
               <p>Sign up</p>
             </button>
@@ -43,9 +42,7 @@ export const SignIn = (props) => {
             onChange={(e) => setPass(e.target.value)}
           />
           <div className="button-container">
-            <button onClick={() => props.onFormSwitch("searchresults")}>
-              Sign in
-            </button>
+            <button onClick={() => navigate("/searchresults")}>Sign in</button>
           </div>
         </form>
       </div>

@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 export const SignUp = (props) => {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
   const [name, setName] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,10 +20,7 @@ export const SignUp = (props) => {
             <h4>Welcome to PETAL</h4>
           </div>
           <div>
-            <button
-              className="link-btn"
-              onClick={() => props.onFormSwitch("signin")}
-            >
+            <button className="link-btn" onClick={() => navigate("/")}>
               Have an Account?
               <p>Sign in</p>
             </button>
@@ -54,7 +53,7 @@ export const SignUp = (props) => {
             onChange={(e) => setPass(e.target.value)}
           />
           <div className="button-container">
-            <button>Sign up</button>
+            <button onClick={() => navigate("/searchresults")}>Sign up</button>
           </div>
         </form>
       </div>
