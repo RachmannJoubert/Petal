@@ -9,15 +9,19 @@ import SearchResults from "./components/SearchResults";
 
 function App() {
   const [user, setUser] = useState({});
+  const [plant, setPlant] = useState({});
   return (
     <div className="App">
       <Router>
         <Routes>
           <Route path="/" element={<SignIn setUser={setUser} />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="/plantdetail" element={<PlantDetail />} />
+          <Route path="/plantdetail" element={<PlantDetail plant={plant} />} />
           <Route path="/home" element={<Home user={user} />} />
-          <Route path="/searchresults" element={<SearchResults />} />
+          <Route
+            path="/searchresults"
+            element={<SearchResults setPlant={setPlant} />}
+          />
         </Routes>
       </Router>
     </div>

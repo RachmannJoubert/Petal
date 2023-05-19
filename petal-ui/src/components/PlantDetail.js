@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import "../styles/search-results.css";
+import "../styles/plant-detail.css";
 
-const SearchResults = () => {
+const PlantDetail = ({ plant }) => {
   return (
     <div className="container">
       <div className="search-results-container">
         <img src={require("../styles/back_button.png")} />
-        <h3>This is a Plant</h3>
+        <h3>{plant.name}</h3>
       </div>
       <div className="plantcare-title">
         <h3>Plant Care</h3>
@@ -29,13 +29,10 @@ const SearchResults = () => {
       </div>
       <div className="overview-container">
         <h3>Overview</h3>
-        <p>planty plant planty plant plant plant plant plant</p>
-        <p>planty plant planty plant plant plant plant plant</p>
-        <p>planty plant planty plant plant plant plant plant</p>
-        <p>planty plant planty plant plant plant plant plant</p>
+        <p>{plant.description}</p>
       </div>
     </div>
   );
 };
 
-export default SearchResults;
+export default PlantDetail;
