@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-export const SignIn = (props) => {
+export const SignIn = ({ setUser }) => {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(email);
+    setUser(email);
+    navigate("/home");
   };
   return (
     <div className="main">
@@ -42,7 +44,7 @@ export const SignIn = (props) => {
             onChange={(e) => setPass(e.target.value)}
           />
           <div className="button-container">
-            <button onClick={() => navigate("/home")}>Sign in</button>
+            <button onClick={() => handleSubmit}>Sign in</button>
           </div>
         </form>
       </div>
