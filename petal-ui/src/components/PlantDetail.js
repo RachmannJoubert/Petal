@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 import "../styles/plant-detail.css";
+import { useNavigate } from "react-router-dom";
 
 const PlantDetail = ({ plant }) => {
+  const navigate = useNavigate();
   return (
     <div className="container">
       <div className="search-results-container">
-        <img src={require("../styles/back_button.png")} />
+        <button className="back-btn" onClick={() => navigate("/searchresults")}>
+          <img src={require("../styles/back_button.png")} />
+        </button>
         <h3>{plant.name}</h3>
+        <img src={require("../styles/plant.png")} />
       </div>
       <div className="plantcare-title">
         <h3>Plant Care</h3>
