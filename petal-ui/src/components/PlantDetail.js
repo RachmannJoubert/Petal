@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import "../styles/plant-detail.css";
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const PlantDetail = ({ plant }) => {
   return (
     <div className="container">
+        
       <div className="search-results-container">
-        <img src={require("../styles/back_button.png")} />
+        <div styles={{}}>
+         <ArrowBackIcon sx={{fontSize:35}}/>
+         </div>
         <h3>{plant.name}</h3>
       </div>
       <div className="plantcare-title">

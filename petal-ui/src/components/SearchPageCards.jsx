@@ -1,7 +1,7 @@
 import React from 'react'
-import { Card,CardActionArea,Container,Typography} from '@mui/material';
+import {Card,CardActionArea, Typography} from '@mui/material';
 import CardMedia from '@mui/material/CardMedia';
-
+import { useNavigate } from "react-router-dom";
 
 
 const CARD_HEIGHT = 285;
@@ -19,15 +19,19 @@ const styles = {
 }
 
 function SearchPageCards({title, description,url}) {
+  const navigate = useNavigate();
+  const handleButtonClick = () => {
+    navigate("/plantdetail");
+  };
     return(
         <>
         <div styles={{background: '#518273'}}>
         <Card sx={styles.root}>
-        <CardActionArea sx={{justifyContent: 'flex-start'}}>
+        <CardActionArea sx={{justifyContent: 'flex-start', height:CARD_HEIGHT}}
+        onClick={handleButtonClick}>
+        <div style={{display: 'flex', flexDirection: 'row', padding: '20px 0px 0px 10px'}}>
 
-        <div style={{display: 'flex', flexDirection: 'row', padding: '20px 0px 0px 20px'}}>
-
-        <div style={{width: '30%', height: CARD_HEIGHT, marginTop:25}}>
+        <div style={{width: '30%', height: CARD_HEIGHT, marginTop:15}}>
             <Typography gutterBottom variant="h5" component="div">
               {title}
             </Typography>

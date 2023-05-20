@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import PlantDetail from "./components/PlantDetail";
+import SearchPage from "./pages/SearchPage";
 import Home from "./components/Home";
 import SearchResults from "./components/SearchResults";
 
@@ -20,7 +21,7 @@ function App() {
           <Route path="/home" element={<Home user={user} />} />
           <Route
             path="/searchresults"
-            element={<SearchResults setPlant={setPlant} />}
+            element={<SearchPage setPlant={setPlant} />}
           />
         </Routes>
       </Router>

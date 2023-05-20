@@ -28,6 +28,7 @@ const plantSearchCards = [
     },
   ];
   
+
   function SearchCardListView(){
     return(
         plantSearchCards.map(searchCards => (
