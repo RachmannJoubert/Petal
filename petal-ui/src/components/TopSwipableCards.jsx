@@ -4,8 +4,7 @@ import SwipeableViews from 'react-swipeable-views';
 import Button from '@mui/material/Button';
 import MobileStepper from '@mui/material/MobileStepper';
 import {useTheme } from '@mui/material/styles';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+
 
 const plantCardData = [
   {
