@@ -4,12 +4,15 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const PlantDetail = ({ plant }) => {
   return (
-    <div className="container">
-        
+    <div className="container"> 
       <div className="search-results-container">
-        <div styles={{}}>
+
+
+         <div styles={{}}>
          <ArrowBackIcon sx={{fontSize:35}}/>
          </div>
+
+
         <h3>{plant.name}</h3>
       </div>
       <div className="plantcare-title">

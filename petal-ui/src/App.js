@@ -6,7 +6,7 @@ import SignUp from "./components/SignUp";
 import PlantDetail from "./components/PlantDetail";
 import SearchPage from "./pages/SearchPage";
 import Home from "./components/Home";
-import SearchResults from "./components/SearchResults";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   const [user, setUser] = useState({});
@@ -18,7 +18,7 @@ function App() {
           <Route path="/" element={<SignIn setUser={setUser} />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/plantdetail" element={<PlantDetail plant={plant} />} />
-          <Route path="/home" element={<Home user={user} />} />
+          <Route path="/home" element={<Dashboard user={user} />} />
           <Route
             path="/searchresults"
             element={<SearchPage setPlant={setPlant} />}
