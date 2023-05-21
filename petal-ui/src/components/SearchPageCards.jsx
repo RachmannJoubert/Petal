@@ -1,6 +1,7 @@
 import React from 'react'
 import { Card,CardActionArea,Container,Typography} from '@mui/material';
 import CardMedia from '@mui/material/CardMedia';
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -18,10 +19,15 @@ const styles = {
 
 }
 
-function SearchPageCards({title, description,url}) {
+function SearchPageCards({title, description,url,setPlant}) {
+  const navigate = useNavigate();
+  const handleButtonClick = () => {
+    setPlant(2);
+    navigate("/plantdetail");
+  };
     return(
         <>
-        <div styles={{background: '#518273'}}>
+        <div styles={{background: '#518273'}} onClick={handleButtonClick}>
         <Card sx={styles.root}>
         <CardActionArea sx={{justifyContent: 'flex-start'}}>
 
