@@ -1,15 +1,25 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 export const SignIn = ({ setUser }) => {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
+  const [error, setError] = useState("");
   const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(email);
-    setUser(email);
-    navigate("/home");
+
+    if (!email || !pass) {
+      setError("Please enter both username/email and password");
+    } else {
+      setError(""); // Clear any previous error
+      console.log(email);
+      setUser(email);
+      navigate("/home");
+    }
   };
+
   return (
     <div className="main">
       <h3>Petal Logo</h3>
@@ -26,6 +36,8 @@ export const SignIn = ({ setUser }) => {
           </div>
         </div>
         <h2>Sign in</h2>
+        {error && <div className="error-message">{error}</div>}{" "}
+        {/* Display error message */}
         <form className="sign-in-form" onSubmit={handleSubmit}>
           <label htmlFor="email">Enter your username or email address</label>
           <input
@@ -44,7 +56,7 @@ export const SignIn = ({ setUser }) => {
             onChange={(e) => setPass(e.target.value)}
           />
           <div className="button-container">
-            <button onClick={() => handleSubmit}>Sign in</button>
+            <button type="submit">Sign in</button>
           </div>
         </form>
       </div>

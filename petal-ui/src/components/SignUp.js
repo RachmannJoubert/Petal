@@ -1,14 +1,24 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+
 export const SignUp = (props) => {
   const [email, setEmail] = useState("");
   const [pass, setPass] = useState("");
   const [name, setName] = useState("");
+  const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(email);
+
+    if (!name || !email || !pass) {
+      setError("Please enter all required fields");
+    } else {
+      setError(""); // Clear any previous error
+      console.log(email);
+      // Perform sign-up logic
+      navigate("/searchresults");
+    }
   };
 
   return (
@@ -27,6 +37,8 @@ export const SignUp = (props) => {
           </div>
         </div>
         <h2>Sign up</h2>
+        {error && <div className="error-message">{error}</div>}{" "}
+        {/* Display error message */}
         <form className="sign-up-form" onSubmit={handleSubmit}>
           <label htmlFor="name">Full name</label>
           <input
@@ -53,11 +65,12 @@ export const SignUp = (props) => {
             onChange={(e) => setPass(e.target.value)}
           />
           <div className="button-container">
-            <button onClick={() => navigate("/searchresults")}>Sign up</button>
+            <button type="submit">Sign up</button>
           </div>
         </form>
       </div>
     </div>
   );
 };
+
 export default SignUp;
