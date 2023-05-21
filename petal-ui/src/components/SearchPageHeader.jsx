@@ -38,7 +38,7 @@ const styles = {
     return (
         <>
         <Card sx={styles.Container}>
-        <ArrowBackIcon sx={{position:'absolute', alignSelf: 'flex-start', margin:1, fontSize:35, color:'white'}}/>
+        <ArrowBackIcon sx={{position:'absolute', margin:2, fontSize:35, marginLeft:-23,color:'white'}}/>
 
         <Card sx={styles.root}>
             <OutlinedInput

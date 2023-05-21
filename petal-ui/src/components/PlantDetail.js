@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../styles/plant-detail.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 const PlantDetail = ({ plantId }) => {
   const navigate = useNavigate();
@@ -44,7 +45,7 @@ const PlantDetail = ({ plantId }) => {
               className="back-btn"
               onClick={() => navigate("/searchresults")}
             >
-              <img src={require("../styles/back_button.png")} />
+              <ArrowBackIcon sx={{ fontSize: 35 }} />
             </button>
             <div className="name-image-wrapper">
               <h3>{plantDetail.common_name}</h3>
