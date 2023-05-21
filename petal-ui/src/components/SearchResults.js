@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import SearchPageHeader from "./SearchPageHeader";
 import SearchCardListView from "./SearchPageCardMap";
 
-const HomePage = ({ setPlant }) => {
+const SearchResults = ({ setPlant }) => {
   const navigate = useNavigate();
   const handleButtonClick = () => {
     setPlant(2);
@@ -20,4 +20,4 @@ const HomePage = ({ setPlant }) => {
   );
 };
 
-export default HomePage;
+export default SearchResults;
