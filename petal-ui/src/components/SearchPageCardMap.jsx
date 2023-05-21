@@ -28,14 +28,14 @@ const plantSearchCards = [
     },
   ];
   
-
-  function SearchCardListView(){
+  function SearchCardListView({setPlant}){
     return(
         plantSearchCards.map(searchCards => (
             <SearchPageCards
             title={searchCards.title}
             description={searchCards.description}
             url = {searchCards.url}
+            setPlant={setPlant}
             />
         ))
     );
