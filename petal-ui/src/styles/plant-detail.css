@@ -17,6 +17,7 @@ body {
   color: black;
   flex: 1;
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   padding: 20px;
@@ -101,5 +102,19 @@ body {
 }
 
 .back-btn {
-  background-color: white;
+
+    background-color: white;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.name-image-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.plant-image {
+  border-radius: 10%;
+  width: 100%;
 }

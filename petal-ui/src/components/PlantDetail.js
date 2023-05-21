@@ -46,8 +46,13 @@ const PlantDetail = ({ plantId }) => {
             >
               <img src={require("../styles/back_button.png")} />
             </button>
-            <h3>{plantDetail.common_name}</h3>
-            <img src={plantDetail.default_image.medium_url} />
+            <div className="name-image-wrapper">
+              <h3>{plantDetail.common_name}</h3>
+              <img
+                className="plant-image"
+                src={plantDetail.default_image.medium_url}
+              />
+            </div>
           </div>
           <div className="plantcare-title">
             <h3>Plant Care</h3>
