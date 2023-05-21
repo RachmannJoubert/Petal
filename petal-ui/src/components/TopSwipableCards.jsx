@@ -4,6 +4,8 @@ import SwipeableViews from 'react-swipeable-views';
 import Button from '@mui/material/Button';
 import MobileStepper from '@mui/material/MobileStepper';
 import {useTheme } from '@mui/material/styles';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 
 const plantCardData = [
   {
@@ -33,7 +35,7 @@ const plantCardData = [
 
     return (
         <SwipeableViews
-          style={{padding: 38,paddingTop:0}}
+          style={{padding: 38, paddingTop:0}}
           axis="x"
           index={activeStep}
           onChangeIndex={handleStepChange}
@@ -69,10 +71,8 @@ function SwipeButtons ({activeStep, setActiveStep}) {
       dotActive={{color:"green"}}
       sx={(theme) => ({
         marginTop:-5,
-        paddingBottom:0,
         "& .MuiMobileStepper-dotActive": {
             backgroundColor: 'grey'
-            
           },
       })
     }
@@ -89,8 +89,10 @@ function SwipeButtons ({activeStep, setActiveStep}) {
         onClick={handleNext}
         disabled={activeStep === maxSteps - 1}
         >
-        <img src={require("../styles/Group 57.png")}
-        style={{height:50,aspectRatio: 16/16}}/>
+        <img 
+        src={require("../styles/Group 57.png")}
+        style={{height:50,aspectRatio: 16/16}}
+        />
       </Button>
       
     }
@@ -121,7 +123,7 @@ function SwipeButtons ({activeStep, setActiveStep}) {
   )
 }
 
-export default function Carousel() {
+export default function TopCarousel() {
   const [activeStep, setActiveStep] = React.useState(0);
   console.log('Carousel:', activeStep);
   

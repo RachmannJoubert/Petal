@@ -1,6 +1,7 @@
 import React from 'react'
 import SearchIcon from '@mui/icons-material/Search';
-import { Card, InputAdornment, OutlinedInput, Typography } from '@mui/material';
+import { Button, Card, InputAdornment, OutlinedInput, Typography } from '@mui/material';
+import { useNavigate } from "react-router-dom";
 
 const styles = {
     root: {
@@ -48,7 +49,11 @@ const styles = {
 }
 
  function DashHeader() {
+    const navigate = useNavigate();
+    const buttonClick = () => { navigate("/searchresults");
+ };
     return (
+        
         <Card sx={styles.root}>
 
             <div styles={{display:'flex',flexDirection:'row', justifyContent:'center'}}>
@@ -60,9 +65,12 @@ const styles = {
                 sx={styles.searchBar}
                 id="outlined-adornment-weight"
                 endAdornment={(
+                    <Button onClick={buttonClick} sx={{height:0, width:0,padding:0, minWidth:30}}>
+                    
                     <InputAdornment position="end">
-                        <SearchIcon/>
+                    <SearchIcon/>
                     </InputAdornment>
+                    </Button>
                 )}
                 aria-describedby="outlined-weight-helper-text"
                 inputProps={{

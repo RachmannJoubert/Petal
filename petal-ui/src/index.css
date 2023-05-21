@@ -23,7 +23,6 @@ code {
   width: 400px;
   max-width: 400px;
   background-color: white;
-  height: 100vh;
   justify-content: space-between;
   border: 1px solid gray;
 }
