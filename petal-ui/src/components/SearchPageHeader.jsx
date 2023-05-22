@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import SearchIcon from '@mui/icons-material/Search';
-import { Card,InputAdornment, OutlinedInput} from '@mui/material';
+import { Button, Card,InputAdornment, OutlinedInput} from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import axios from 'axios';
+import { Link, useLocation } from 'react-router-dom';
 const styles = {
     root: {
         width: 'auto', 
@@ -35,20 +37,29 @@ const styles = {
 }
 
     function SearchPageHeader() {
-    return (
+        const [search, setSearch] = useState();
+
+        const handleSetSearch = (event) => {
+            setSearch(event.target.value);
+        }
+
+        return (
         <>
         <Card sx={styles.Container}>
         <ArrowBackIcon sx={{position:'absolute', margin:2, fontSize:35, marginLeft:-23,color:'white'}}/>
 
         <Card sx={styles.root}>
             <OutlinedInput
+                onChange={handleSetSearch}
                 placeholder='Find your perfect plant'
                 sx={styles.searchBar}
                 id="outlined-adornment-weight"
                 endAdornment={(
-                    <InputAdornment position="end">
+                    <Button component={Link} to={{pathname: "/searchresults", search: search}}> 
+                    <InputAdornment position="end" >
                         <SearchIcon/>
                     </InputAdornment>
+                    </Button>
                 )}
                 aria-describedby="outlined-weight-helper-text"
                 inputProps={{

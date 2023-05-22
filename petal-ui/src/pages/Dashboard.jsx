@@ -22,7 +22,8 @@ function Dashboard() {
 
     return (
       <div className = "dashBoardWrapper">
-        <DashHeader />
+        <DashHeader/>
+        
 
         <Typography sx={styles.root}>
           Your Plant Library
@@ -34,6 +35,7 @@ function Dashboard() {
         </Typography>
 
         <TopCarousel/>
+        
       </div>
     );
   }
